@@ -1,11 +1,11 @@
 import random
 
 
-def rand_list(lenght):
-    my_list = []
-    for n in range(lenght):
-        my_list.append(random.randint(0, 1000))
-    return my_list
+# def rand_list(lenght):
+#     my_list = []
+#     for n in range(lenght):
+#         my_list.append(random.randint(0, 1000))
+#     return my_list
 
 
 def max_list(old_list):
@@ -18,7 +18,8 @@ def max_list(old_list):
     return new_list
 
 
-old_list = rand_list(random.randint(10, 20))
+# old_list = rand_list(random.randint(10, 20))
+old_list = list(random.randint(0, 1000) for el in range(0, random.randint(10, 20)))
 print(old_list)
 print(max_list(old_list))
 
