@@ -4,7 +4,14 @@ def fact(n):
         factorial *= el
         yield factorial
 
-n = 4
+
+while True:
+    try:
+        n = int(input('Укажите факториал какого числа Вы хотели бы узнать?'))
+        break
+    except:
+        print("Вы введи не число")
+        continue
 
 for el in fact(n):
     print(el)
