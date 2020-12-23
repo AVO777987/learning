@@ -9,7 +9,6 @@ try:
                 string = string.replace(':', '').replace('(л)', '').replace('(пр)', '').replace('(лаб).', '').replace('(лаб)', '').replace('—', '')
                 if count == 1:
                     key = string
-                    learning.update({key: ''})
                     count += 1
                 else:
                     if not string:
