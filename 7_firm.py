@@ -6,6 +6,7 @@ try:
         average_profit = 0
         firms_profit = 0
         for line in file:
+            profit = 0
             firm = line.split()
             if int(firm[2]) >= int(firm[3]):
                 profit = int(firm[2]) - int(firm[3])
