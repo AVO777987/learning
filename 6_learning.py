@@ -1,6 +1,6 @@
-learning = {}
 try:
     with open('learning.txt', 'r', encoding='UTF-8-sig') as file:
+        learning = {}
         for line in file:
             content = line.split()
             count = 1
