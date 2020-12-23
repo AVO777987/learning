@@ -12,8 +12,8 @@ try:
             if line_number[0] == 'Four':
                 line_number[0] = 'Четыре'
             new_list.append(line_number)
-except:
-    print("Ошибка чтения файла")
+except IOError:
+    print('Файла не существует!!!')
 with open('new_file.txt', 'w', encoding='UTF-8-sig') as file:
     for line in new_list:
         print(f'{line[0]} — {line[1]}', file=file)
