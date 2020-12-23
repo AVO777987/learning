@@ -1,5 +1,5 @@
 try:
-    with open('my_file.txt', 'r', encoding='UTF-8') as file:
+    with open('zarplata.txt', 'r', encoding='UTF-8') as file:
         content = file.readlines()
     personal = {}
     for string in content:

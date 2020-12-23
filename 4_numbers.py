@@ -1,5 +1,5 @@
 try:
-    with open('my_file.txt', 'r', encoding='UTF-8-sig') as file:
+    with open('numbers.txt', 'r', encoding='UTF-8-sig') as file:
         new_list = []
         for line in file:
             line_number = line.split(' — ')
@@ -16,4 +16,5 @@ except IOError:
     print('Файла не существует!!!')
 with open('new_file.txt', 'w', encoding='UTF-8-sig') as file:
     for line in new_list:
+        print(line)
         print(f'{line[0]} — {line[1]}', file=file)

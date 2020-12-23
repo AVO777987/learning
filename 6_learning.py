@@ -1,11 +1,22 @@
 learning = {}
 try:
-    with open('my_file.txt', 'r', encoding='UTF-8-sig') as file:
+    with open('learning.txt', 'r', encoding='UTF-8-sig') as file:
         for line in file:
             content = line.split()
+            count = 1
+            sum_value = 0
             for string in content:
-                print(string)
-                string.replace(':', '').replace('(л)', '').replace('(пр)', '').replace('(лаб).', '').replace('(лаб)', '')
-                print(string)
+                string = string.replace(':', '').replace('(л)', '').replace('(пр)', '').replace('(лаб).', '').replace('(лаб)', '').replace('—', '')
+                if count == 1:
+                    key = string
+                    learning.update({key: ''})
+                    count += 1
+                else:
+                    if not string:
+                        continue
+                    value = int(string)
+                    sum_value += value
+            learning.update({key: sum_value})
+    print(learning)
 except IOError:
     print('Файла не существует!!!')

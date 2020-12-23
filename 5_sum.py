@@ -1,8 +1,8 @@
-with open('my_file.txt', 'w', encoding='UTF-8-sig') as file:
+with open('summ.txt', 'w', encoding='UTF-8-sig') as file:
     numbers = input('Введите числа через пробел')
     print(f'{numbers}', file = file)
 try:
-    with open('my_file.txt', 'r', encoding='UTF-8-sig') as file:
+    with open('summ.txt', 'r', encoding='UTF-8-sig') as file:
         content = file.read()
         numbers = content.split()
         summ = 0
