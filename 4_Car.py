@@ -38,7 +38,10 @@ class WorkCar(Car):
 
 
 class PoliceCar(Car):
-    def __init__(self):
+    def __init__(self, speed, color, name, is_police=bool):
+        self.speed = speed
+        self.color = color
+        self.name = name
         self.is_police = 'True'
 
 
