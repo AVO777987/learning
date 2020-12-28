@@ -21,3 +21,4 @@ worker_1.get_full_name()
 worker_1.get_total_income()
 worker_2.get_full_name()
 worker_2.get_total_income()
+
